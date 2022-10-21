@@ -1,0 +1,172 @@
+/* 初始化 */
+body {
+    background-color: #f5f5f5;
+}
+.container {
+    background-color: #fff;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #666;
+}
+a:hover {
+    text-decoration: none;
+}
+p {
+    margin-bottom: 0;
+}
+
+/* 修改container最大宽度为1280px */
+@media screen and (min-width:1280px) {
+    .container {
+        width: 1280px;
+    }
+}
+
+/* 左侧 */
+header {
+    padding-left: 0!important;
+}
+.logo {
+    background-color: #429ad9;
+}
+/* 超小屏下显示span */
+.logo span {
+    display: block;
+    background-color: #429ad9;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.logo img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.nav {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+.nav a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+.nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+.nav a::before {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+/* 中间 */
+/* 新闻模块 */
+.news {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.news ul li {
+    float: left;
+    width: 25%;
+    height: 128px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.news ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.news ul li a img {
+    width: 100%;
+    height: 100%;
+}
+.news ul li a p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 0, 0, .5);
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+}
+.news ul li:first-child a p {
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+.news ul li:first-child {
+    width: 50%;
+    height: 266px;
+    padding-left: 0;
+}
+/* 发布模块 */
+.publish {
+    padding: 0 15px;
+}
+.publish .row {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+.publish img {
+    width: 100%;
+}
+
+/* 右侧 */
+.banner img {
+    width: 100%;
+}
+.hot {
+    display: block;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    padding: 0 20px 20px;
+}
+.hot span {
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+.hot p {
+    font-size: 12px;
+}
+
+/* 响应式 */
+/* 当进入小屏幕还有超小屏幕时,nav里的li浮动,宽度设为20% */
+@media screen and (max-width:991px) {
+    .nav li {
+        float: left;
+        width: 20%;
+    }
+    article {
+        margin-top: 15px;
+    }
+}
+/* 当进入超小屏幕,nav里的文字变成14px */
+/* 当进入超小屏幕,news的第一个li宽度为100%,其余的为50% */
+@media screen and (max-width:767px) {
+    .nav li a {
+        font-size: 14px;
+    }
+    .news li:first-child {
+        width: 100%!important;
+    }
+    .news li {
+        width: 50%!important;
+    }
+    .publish h3 {
+        font-size: 14px;
+    }
+}
